@@ -9,8 +9,13 @@
 - 确保已经安装了 cron 服务 `apt-get install cron`
 - 有足够的权限执行脚本和创建 cron 任务
 - 需要从`github` 拉取部分代码到指定目录
-    - `cd HOST_LOCATION`
-    -
+    - `cd HOST_LOCATION` // 注意这里的 HOST_LOCATION 为宿主机存放配置文件和文档的地方
+    - 下载指定代码文件
+      ```shell
+        curl -O https://raw.githubusercontent.com/appex-fe/code-metrics/blob/main/environment_config/config.json &&
+        curl -O https://raw.githubusercontent.com/appex-fe/code-metrics/blob/main/environment_config/sh.conf &&
+        curl -O https://raw.githubusercontent.com/appex-fe/code-metrics/blob/main/environment_config/start.sh 
+    - 根据文件中的注释要求，修改配置文件
 
 ## 2. 配置文件
 
@@ -142,7 +147,7 @@ chmod +x start.sh
 
 ## 5. 日志
 
-脚本执行的日志将保存在 `code_metrics_cron` 目录下，以日期命名（如 `2023-05-20.log`）。
+脚本执行的日志将保存在 `code_metrics_cron` 目录下，以日期命名（如 `2024-09-20.log`）。
 
 ## 6. 注意事项
 
