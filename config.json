@@ -1,0 +1,48 @@
+{
+  "PROJECT_ROOT_DIR": "src/",
+  "code_snippets": {
+    "match": [
+      {
+        "file_type": [
+          "vue",
+          "tsx"
+        ],
+        "code_snippets": [
+          "<input",
+          "<form",
+          "<select",
+          "/(lwtable)/i"
+        ]
+      }
+    ],
+    "ignore_dir": [
+      "views/probeTemplate/yunshixun",
+      "views/probeTask/yunshixun",
+      "views/dashboard/proComponents"
+    ]
+  },
+  "find_suffix": {
+    "file_type": [
+      "vue",
+      "js"
+    ],
+    "group_by": [
+      "views/*",
+      "views/site/",
+      "components/",
+      "shared/",
+      "store/"
+    ],
+    "ignore_dir": [
+      "views/probeTemplate/yunshixun",
+      "views/probeTask/yunshixun",
+      "views/dashboard/proComponents",
+      "shared/lang"
+    ]
+  },
+  "docs_host_port": "http://10.30.26.23:8077",
+  "ding_talk": {
+    "token": "f9f31c1c10c65291b685be06aaa94a501ee7bfc959b33eb8ce7b5786c70dab57",
+    "secret": "SEC8a173846d09c940fe10d57715f6cf73ccba359a5509a596e2b0409235e299ebf"
+  }
+}

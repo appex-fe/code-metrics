@@ -1,0 +1,51 @@
+{
+  // 一般为 src , 这样会扫描 /app/project/src 下的文件
+  "PROJECT_ROOT_DIR": "<要扫描的根目录>",
+  // 代码片段匹配规则
+  "code_snippets": {
+    "match": [
+      {
+        // 匹配的文件类型，比如 java , js , py 无需带点
+        "file_type": [
+          "<文件类型1>",
+          "<文件类型2>"
+        ],
+        // 匹配的代码片段，可以是纯文本，也可以是正则表达式
+        "code_snippets": [
+          "<代码片段1>",
+          "<代码片段2>"
+        ]
+      }
+    ],
+    // 忽略的目录，相对于 PROJECT_ROOT_DIR 下的，比如 /app/project/src/test
+    "ignore_dir": [
+      "<忽略目录1>",
+      "<忽略目录2>"
+    ]
+  },
+  // 文件后缀匹配规则
+  "find_suffix": {
+    // 匹配的文件类型，比如 java , js , py 无需带点
+    "file_type": [
+      "<文件类型>"
+    ],
+    // 根据文件夹进行聚合统计，相对于 PROJECT_ROOT_DIR 下的，比如 /app/project/src/utils /app/project/src/service
+    "group_by": [
+      "<分组规则1>",
+      "<分组规则2>"
+    ],
+    // 忽略的目录，相对于 PROJECT_ROOT_DIR 下的，比如 /app/project/src/test
+    "ignore_dir": [
+      "<忽略目录1>",
+      "<忽略目录2>"
+    ]
+  },
+  // 上述输出的信息会输出成一个 PDF 文件，这里配置文档服务器地址, 例如 http://10.10.10.10:8080
+  // 注意这里的访问规则需要用户自己配置 nginx 代理
+  "docs_host_port": "<文档服务器地址>",
+  // 钉钉机器人配置， 每次执行完结果会发送到钉钉机器人，不配置则不会生效
+  "ding_talk": {
+    "token": "<钉钉机器人token>",
+    "secret": "<钉钉机器人secret>"
+  }
+}
